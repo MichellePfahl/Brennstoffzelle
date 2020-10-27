@@ -191,14 +191,23 @@ Zusätzlich zu den Spannungsverlusten kann die Effizienz noch durch Gaslecks bee
 Auch bei der Elektrolyse treten Verluste auf und die Effizienz ist wesentlich geringer als theoretisch möglich und somit ist die benötigte Spannung höher als $\SI{1,18}{V}$.\\
 Den Effizienzwert kann man aus Messwerten berechnen, indem man chemische und elektrische Energie vergleicht:
 \begin{align}
-\eta_\text{B} = \frac{•}{•}
+\eta_\text{B} &= \frac{E_\text{el}}{n |\Delta H|} = \frac{U\cdot I\cdot \Delta t}{ \frac{V_{\ce{H_2}}}{V_{\si{mol}}} \SI{242}{kJ\per mol}}\\
+\eta_\text{E} &= \frac{n |\Delta H|}{E_\text{el}} = \frac{ \frac{V_{\ce{H_2}}}{V_{\si{mol}}} \SI{242}{kJ\per mol}}{U\cdot I\cdot \Delta t}\\
+\eta_\text{ges}=\frac{U_\text{B} \cdot I_\text{B} \Delta t_\text{B}}{U_\text{E} \cdot I_\text{E} \Delta t_\text{E}}
 \end{align}
 
 \section[Messprinzip]{Messprinzip und Versuchsablauf}
 
 \subsection{Aufbau und Geräteliste}
+Für den Versuch wird eine Brennstoffzelle verwendet, die an einen Elektrolyseur mit ablesbaren Gaszylindern angeschlossen ist. Zum Betreiben dessen ist eine  Gleichstromquelle benötigt, die den Strom begrenzen kann um Überlastung des Elektrolyseurs zu vermeiden. Um die Brennstoffzelle bei Last zu betreiben werden die schaltbaren Widerstände in einer Verbraucher-Messbox verwendet. Zum Messen der Werte wird ein Spannungs- und ein Strommessgerät verwendet. Zum Messen der Zeit wird eine Stoppuhr verwendet.\\
+Das Strommessgerät wird stets in Reihe mit dem Verbraucher -Elektrolyseur oder Messbox- geschaltet. Das Spannungsmessgerät kann man mit dem Verbraucher oder mit der Stromquelle parallel schalten. \\
+Misst man die Spannung am Verbraucher, so fließt etwas Strom durch das Spannungsmessgerät und der Stromwert für den Verbraucher ist fehlerbelastet. Der Stromfluss an der Quelle ist exakt, aber durch den Widerstand des Strommessgeräts ist die Spannung an der Quelle fehlerbelastet. \\
+Diese Schaltung heißt Stromfehlerschaltung und ist dann gut, wenn man den Verbraucher mit sehr kleinem Widerstand oder die Quelle mit relativ hohem Widerstand am Verbraucher messen will.\\
+Misst man die Spannung an der Quelle, so fällt etwas Spannung am Strommessgerät ab und die Spannung für den Verbraucher ist fehlerbelastet. Die Spannung an der Quelle ist exakt, aber durch den Stromflus durch das Spannungsmessgerät ist der Stromfluss durch die Quelle fehlerbelastet. \\
+Diese Schaltung heißt Spannungsfehlerschaltung und ist dann gut, wenn man den Verbraucher mit sehr hohem Widerstand oder die Quelle mit niedrigem Widerstand am Verbraucher messen will.\\
 
 \subsection{Versuchsablauf}
+Zuerst wird Leistung und Wirkungsgrad des Elektrolyseurs vermessen. Dafür werden die Messgeräte mit dem Elektrolyseur als Last und dem Netzgerät als Stromquelle verbunden. Nun wird für die Stromstärken $\SI{0,2}{A},\SI{0,3}{A}$ und $\SI{0,4}{A}$ jeweils die entsprechende Spannung gemessen und die Zeit, die benötigt wird um $\SI{10}{ml}\ce{H_2}$ herzustellen, gestoppt.
 
 \section[Messwerte]{Messwerte}
 \section[Auswertung]{Auswertung}
