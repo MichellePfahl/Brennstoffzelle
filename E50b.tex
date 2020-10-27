@@ -57,11 +57,14 @@
 \cfoot{\empty} %Mittig unten im Footer soll nichts eingetragen werden 
 \ifoot{\empty} %Footer unten rechts auf linker und unten links auf rechter Seite. Hier ebenfalls leer.
 
+%CUSTOM
 \newcommand{\diff}[3][]{\frac{\mathrm{d}^{#1} {#2} }{\mathrm{d} {#3}^{#1}}}
 %diff[n]{f}{t}
 \newcommand{\diffp}[3][]{\frac{\partial^{#1} {#2} }{\partial {#3}^{#1}}}
 %diffp[n]{f}{y}
 \newcommand{\dd}{\mathrm{d}}
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -144,13 +147,18 @@ Stuttgart, den \PROTOKOLLDATUM
 
 % Die erste eckige Klammer ist optional, die darin angegebene Bezeichnung steht im Inhaltsverzeichnis anstelle des hinteren (längeren) Namens.
 \section[Versuchsziel]{Versuchsziel und Versuchsmethode}
-
+In diesem Versuch werden die Effizienz und Leistung einer Brennstoffzelle und eines Elektrolyseurs sowie die Leckrate des Gesamtsystems gemessen.
 \section{Grundlagen}
+Eine Brennstoffzelle ist ein Apparat, der eine Reaktion von zwei Stoffen elektrochemisch kontrolliert ablaufen lässt und die Reaktionsenergie als elektrische Energie freigibt. Es gibt Brennstoffzellen für verschiedene exotherme Reaktionen, die Brennstoffzelle in diesem Versuch arbeitet mit Wasserstoff und Sauerstoff:
+\begin{equation}\label{wasser}
+\ce{H_2 + \frac{1}{2}O_2 -> H_2O}
+\end{equation}
+Ein Elektrolyseur verwendet elektrische Energie, um eine endotherme Elektrolysereaktion durchzuführen. Der Elektrolyseur in diesem Versuch spaltet Wasser und kehrt Reaktion (\ref{wasser}) um.
+
 
 \section[Messprinzip]{Messprinzip und Versuchsablauf}
 
 \subsection{Aufbau und Geräteliste}
-
 
 \subsection{Versuchsablauf}
 
