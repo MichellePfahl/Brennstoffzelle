@@ -151,7 +151,7 @@ In diesem Versuch werden die Effizienz und Leistung einer Brennstoffzelle und ei
 \section{Grundlagen}
 Eine Brennstoffzelle ist ein Apparat, der eine Reaktion von zwei Stoffen elektrochemisch kontrolliert ablaufen lässt und die Reaktionsenergie als elektrische Energie freigibt. Es gibt Brennstoffzellen für verschiedene exotherme Reaktionen, die Brennstoffzelle in diesem Versuch arbeitet mit Wasserstoff und Sauerstoff:
 \begin{equation}\label{wasser}
-\ce{H_2(g) + \frac{1}{2}O_2(g) -> H_2O(l)}
+\ce{H_2 + \frac{1}{2}O_2 -> H_2O}
 \end{equation}
 Ein Elektrolyseur verwendet elektrische Energie, um eine endotherme Elektrolysereaktion durchzuführen. Der Elektrolyseur in diesem Versuch spaltet Wasser und kehrt Reaktion (\ref{wasser}) um.\\
 Um die Reaktion kontrolliert ablaufen zu lassen, wird sie in zwei Teilreaktionen getrennt:
@@ -159,11 +159,40 @@ Um die Reaktion kontrolliert ablaufen zu lassen, wird sie in zwei Teilreaktionen
 \ce{H_2 &-> 2H^+ + 2e^-} \\
 \ce{\frac{1}{2}O_2 + 2H^+ + 2e^- &->H_2O}
 \end{align}
-Diese Teilreaktionen laufen in der Brennstoffzelle räumlich getrennt auf zwei verschiedenen Seiten einer für $\ce{H^+}$-Ionen durchlässigen Membran ab. Die Elektronen müssen über elektrische Leitungen fließen, was nur möglich ist wenn ein an die Zelle angeschlossener elektrischer Verbraucher Strom fließen lässt. Kann nicht genug Strom fließen, so baut sich an den Elektroden eine Spannung auf. Damit wird die Reaktion geregelt und die Reaktionsenergie wird elektrisch an den Verbraucher abgegeben.\\
+Diese Teilreaktionen laufen in der Brennstoffzelle räumlich getrennt auf zwei verschiedenen Seiten einer für $\ce{H^+}$-Ionen durchlässigen Membran ab. 
+\begin{figure}[h]
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=.9\textwidth]{BZelle.png}
+\end{minipage}
+\begin{minipage}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=.9\textwidth]{Elysour.png}
+\end{minipage}
+\caption{Aufbau Brennstoffzelle und Membran-Elektrolyseur \cite{Anleitung}}
+\end{figure}
+Die Elektronen müssen über elektrische Leitungen fließen, was nur möglich ist wenn ein an die Zelle angeschlossener elektrischer Verbraucher Strom fließen lässt. Kann nicht genug Strom fließen, so baut sich an den Elektroden eine Spannung auf. Damit wird die Reaktion geregelt und die Reaktionsenergie wird elektrisch an den Verbraucher abgegeben.\\
 In einem Elektrolyseur wird umgekehrt eine Spannung an zwei Elektroden in $\ce{H_2O}$ angelegt. Dadurch läuft Reaktionen der Brennstoffzelle umgekehrt ab. \\
 Es kann eine Protonendurchlässige Membran wie in der Brennstoffzelle verwendet werden, oder man kann die Elektroden in zwei Seiten eines mit saurem bzw. alkalischem Wasser gefüllten U-Rohrs installieren und das ionenreiche Wasser selbst als "Membran" nutzen, die keine Gase $\ce{H_2},\ce{O_2}$ hindurchlässt aber Protonen in Form von $\ce{H_3O^+}$ bzw. $\ce{OH^-}$ transportieren kann.\\
-
-
+\newpage
+Die Energie der Reaktion beträgt:
+\begin{equation}
+\ce{H_2(g) + \frac{1}{2}O_2(g) -> H_2O(g) + \SI{242}{kJ\per mol}}
+\end{equation}\begin{equation}
+|\Delta H| = \SI{242}{kJ\per mol} = 2\cdot\SI{1,25}{eV}
+\end{equation}
+Wäre diese komplett in elektrisches Potential der Elektronen umgesetzt, würde man also eine Spannung von $\SI{1,25}{V}$ an den Elektroden erwarten. Da durch Entropie nur die Gibbs-Energie zur Verfügung steht ist die theoretische Spannung geringer: 
+\begin{equation}
+|\Delta G| = |\Delta H - T \Delta S| = \SI{229}{kJ\per mol} = 2\cdot\SI{1,18}{eV}
+\end{equation}
+Aufgrund verschiedener weiterer Verluste liegt die tatsächliche Spannung für eine typische Wasserstoff-Brennstoffzelle knapp unter $\SI{1}{V}$. Da die Anzahl an Elektronen und damit der Stromfluss durch nichts angehoben wird, reduziert dies bereits die Effizienz um gut $20\%$.\\
+Weitere Verluste entstehen bei höheren Strömen dadurch, dass die Brennstoffzelle einen eigenen Widerstand hat. Dadurch wird proportional zum Strom die Spannung und damit die Effizienz gesenkt, da Strom und Wasserstoffumsetzung zwingend um den Faktor $\frac{2N_A e}{\si{mol}}$ zusammenhängen.\\
+Zusätzlich zu den Spannungsverlusten kann die Effizienz noch durch Gaslecks beeinträchtigt werden, durch die mehr Atome Wasserstoff verbraucht werden können als Elektronen durch den Schaltkreis fließen. Die Leckrate lässt sich einfach bestimmen, indem man den Wasserstoffverbrauch misst während kein Strom fließt.\\
+Auch bei der Elektrolyse treten Verluste auf und die Effizienz ist wesentlich geringer als theoretisch möglich und somit ist die benötigte Spannung höher als $\SI{1,18}{V}$.\\
+Den Effizienzwert kann man aus Messwerten berechnen, indem man chemische und elektrische Energie vergleicht:
+\begin{align}
+\eta_\text{B} = \frac{•}{•}
+\end{align}
 
 \section[Messprinzip]{Messprinzip und Versuchsablauf}
 
