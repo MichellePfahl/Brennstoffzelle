@@ -156,8 +156,8 @@ Eine Brennstoffzelle ist ein Apparat, der eine Reaktion von zwei Stoffen elektro
 Ein Elektrolyseur verwendet elektrische Energie, um eine endotherme Elektrolysereaktion durchzuführen. Der Elektrolyseur in diesem Versuch spaltet Wasser und kehrt Reaktion (\ref{wasser}) um.\\
 Um die Reaktion kontrolliert ablaufen zu lassen, wird sie in zwei Teilreaktionen getrennt:
 \begin{align}
-\ce{H_2 &-> 2H^+ + 2e^-} \\
-\ce{\frac{1}{2}O_2 + 2H^+ + 2e^- &->H_2O}
+\ce{H_2 &-> 2H+ + 2e-} \\
+\ce{\frac{1}{2}O_2 + 2H+ + 2e- &->H_2O}
 \end{align}
 Diese Teilreaktionen laufen in der Brennstoffzelle räumlich getrennt auf zwei verschiedenen Seiten einer für $\ce{H^+}$-Ionen durchlässigen Membran ab. 
 \begin{figure}[h]
@@ -185,6 +185,7 @@ Wäre diese komplett in elektrisches Potential der Elektronen umgesetzt, würde 
 \begin{equation}
 |\Delta G| = |\Delta H - T \Delta S| = \SI{229}{kJ\per mol} = 2\cdot\SI{1,18}{eV}
 \end{equation}
+Dies entspricht der Spannung zwischen $\ce{O_2 + 2H_2O + 4e- <=> 4OH^-}$ und $\ce{2H_2O +2e- <=>H_2 + 2OH-}$ in der elektrochemischen Spannungsreihe. Diese Reaktionen zusammen entsprechen (\ref{wasser}).\\
 Aufgrund verschiedener weiterer Verluste liegt die tatsächliche Spannung für eine typische Wasserstoff-Brennstoffzelle knapp unter $\SI{1}{V}$. Da die Anzahl an Elektronen und damit der Stromfluss durch nichts angehoben wird, reduziert dies bereits die Effizienz um gut $20\%$.\\
 Weitere Verluste entstehen bei höheren Strömen dadurch, dass die Brennstoffzelle einen eigenen Widerstand hat. Dadurch wird proportional zum Strom die Spannung und damit die Effizienz gesenkt, da Strom und Wasserstoffumsetzung zwingend um den Faktor $\frac{2N_A e}{\si{mol}}$ zusammenhängen.\\
 Zusätzlich zu den Spannungsverlusten kann die Effizienz noch durch Gaslecks beeinträchtigt werden, durch die mehr Atome Wasserstoff verbraucht werden können als Elektronen durch den Schaltkreis fließen. Die Leckrate lässt sich einfach bestimmen, indem man den Wasserstoffverbrauch misst während kein Strom fließt.\\
@@ -193,7 +194,7 @@ Den Effizienzwert kann man aus Messwerten berechnen, indem man chemische und ele
 \begin{align}
 \eta_\text{B} &= \frac{E_\text{el}}{n |\Delta H|} = \frac{U\cdot I\cdot \Delta t}{ \frac{V_{\ce{H_2}}}{V_{\si{mol}}} \SI{242}{kJ\per mol}}\\
 \eta_\text{E} &= \frac{n |\Delta H|}{E_\text{el}} = \frac{ \frac{V_{\ce{H_2}}}{V_{\si{mol}}} \SI{242}{kJ\per mol}}{U\cdot I\cdot \Delta t}\\
-\eta_\text{ges}=\frac{U_\text{B} \cdot I_\text{B} \Delta t_\text{B}}{U_\text{E} \cdot I_\text{E} \Delta t_\text{E}}
+\eta_\text{ges}&=\frac{U_\text{B} \cdot I_\text{B} \Delta t_\text{B}}{U_\text{E} \cdot I_\text{E} \Delta t_\text{E}}
 \end{align}
 
 \section[Messprinzip]{Messprinzip und Versuchsablauf}
@@ -207,7 +208,15 @@ Misst man die Spannung an der Quelle, so fällt etwas Spannung am Strommessgerä
 Diese Schaltung heißt Spannungsfehlerschaltung und ist dann gut, wenn man den Verbraucher mit sehr hohem Widerstand oder die Quelle mit niedrigem Widerstand am Verbraucher messen will.\\
 
 \subsection{Versuchsablauf}
-Zuerst wird Leistung und Wirkungsgrad des Elektrolyseurs vermessen. Dafür werden die Messgeräte mit dem Elektrolyseur als Last und dem Netzgerät als Stromquelle verbunden. Nun wird für die Stromstärken $\SI{0,2}{A},\SI{0,3}{A}$ und $\SI{0,4}{A}$ jeweils die entsprechende Spannung gemessen und die Zeit, die benötigt wird um $\SI{10}{ml}\ce{H_2}$ herzustellen, gestoppt.
+Zuerst wird Leistung und Wirkungsgrad des Elektrolyseurs vermessen. Dafür werden die Messgeräte mit dem Elektrolyseur als Last und dem Netzgerät als Stromquelle verbunden. Nun wird für die Stromstärken $\SI{0,2}{A},\SI{0,3}{A}$ und $\SI{0,4}{A}$ jeweils die entsprechende Spannung gemessen und die Zeit, die benötigt wird um $\SI{10}{ml}\ce{H_2}$ herzustellen, gestoppt.\\
+
+Nun wird die Brennstoffzelle gemessen. Hierfür werden die Messgeräte mit der Messbox als Last und der Brennstoffzelle als Quelle geschaltet. Stromfehlerschaltung und Spannungsfehlerschaltung werden verglichen, da sie je nach den internen Widerständen der Messgeräte verschieden gut geeignet sind.\\
+Es werden nun für verschiedene Widerstände die Ströme und Spannungen gemessen und die Messwerte in einem $U(I)$-Diagramm aufgetragen. \\
+Auch ein $P(I)$-Diagramm kann nach $P=U\cdot I$ erstellt werden.\\
+
+Um den Wirkungsgrad der Brennstoffzelle zu messen, wird für drei verschiedene Widerstände im mittleren Bereich jeweils $U,I$ und die benötigte Zeit für den Verbrauch von $\SI{5}{ml}\ce{H_2}$ gemessen.\\Zusätzlich wird die Leckrate als $\ce{H_2}$-Verbrauch für 5 Minuten ohne Stromverbrauch gemessen. \\
+
+Um den Gesamtwirkungsgrad zu bestimmen werden die benötigte Energie des Elektrolyseurs und die geleistete Energie der Brennstoffzelle für eine bestimme Menge $\ce{H_2}$ verglichen.
 
 \section[Messwerte]{Messwerte}
 \section[Auswertung]{Auswertung}
