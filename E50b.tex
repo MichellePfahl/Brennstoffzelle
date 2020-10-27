@@ -151,9 +151,18 @@ In diesem Versuch werden die Effizienz und Leistung einer Brennstoffzelle und ei
 \section{Grundlagen}
 Eine Brennstoffzelle ist ein Apparat, der eine Reaktion von zwei Stoffen elektrochemisch kontrolliert ablaufen lässt und die Reaktionsenergie als elektrische Energie freigibt. Es gibt Brennstoffzellen für verschiedene exotherme Reaktionen, die Brennstoffzelle in diesem Versuch arbeitet mit Wasserstoff und Sauerstoff:
 \begin{equation}\label{wasser}
-\ce{H_2 + \frac{1}{2}O_2 -> H_2O}
+\ce{H_2(g) + \frac{1}{2}O_2(g) -> H_2O(l)}
 \end{equation}
-Ein Elektrolyseur verwendet elektrische Energie, um eine endotherme Elektrolysereaktion durchzuführen. Der Elektrolyseur in diesem Versuch spaltet Wasser und kehrt Reaktion (\ref{wasser}) um.
+Ein Elektrolyseur verwendet elektrische Energie, um eine endotherme Elektrolysereaktion durchzuführen. Der Elektrolyseur in diesem Versuch spaltet Wasser und kehrt Reaktion (\ref{wasser}) um.\\
+Um die Reaktion kontrolliert ablaufen zu lassen, wird sie in zwei Teilreaktionen getrennt:
+\begin{align}
+\ce{H_2 &-> 2H^+ + 2e^-} \\
+\ce{\frac{1}{2}O_2 + 2H^+ + 2e^- &->H_2O}
+\end{align}
+Diese Teilreaktionen laufen in der Brennstoffzelle räumlich getrennt auf zwei verschiedenen Seiten einer für $\ce{H^+}$-Ionen durchlässigen Membran ab. Die Elektronen müssen über elektrische Leitungen fließen, was nur möglich ist wenn ein an die Zelle angeschlossener elektrischer Verbraucher Strom fließen lässt. Kann nicht genug Strom fließen, so baut sich an den Elektroden eine Spannung auf. Damit wird die Reaktion geregelt und die Reaktionsenergie wird elektrisch an den Verbraucher abgegeben.\\
+In einem Elektrolyseur wird umgekehrt eine Spannung an zwei Elektroden in $\ce{H_2O}$ angelegt. Dadurch läuft Reaktionen der Brennstoffzelle umgekehrt ab. \\
+Es kann eine Protonendurchlässige Membran wie in der Brennstoffzelle verwendet werden, oder man kann die Elektroden in zwei Seiten eines mit saurem bzw. alkalischem Wasser gefüllten U-Rohrs installieren und das ionenreiche Wasser selbst als "Membran" nutzen, die keine Gase $\ce{H_2},\ce{O_2}$ hindurchlässt aber Protonen in Form von $\ce{H_3O^+}$ bzw. $\ce{OH^-}$ transportieren kann.\\
+
 
 
 \section[Messprinzip]{Messprinzip und Versuchsablauf}
@@ -173,7 +182,7 @@ Ein Elektrolyseur verwendet elektrische Energie, um eine endotherme Elektrolyser
 % Für Dokumente mit mehr Referenzen empfiehlt es sich, auf eine separate .bib -Datei umzusteigen, die alle Referenzen enthält. Diese Referenzen können bei den meisten wissenschaftlichen Publikationen direkt über "BibTex-Export" oder ähnliches heruntergeladen werden. Anstelle von \begin{thebibliography}...\bibitem{}..\bibitem{}..\end{thebibliography} muss dann lediglich \bibliography{Dateiname.bib} eingebunden werden.
 
 \section{Anhang}
-%\includepdf[pages=-]{scan.pdf}
+\includepdf[pages=-]{E50b Messdaten.pdf}
 
 
 \end{document}
